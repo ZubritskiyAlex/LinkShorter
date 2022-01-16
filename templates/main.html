@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LINKshorter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = 'stylesheet' type="text/css" media="screen" href='{% static "styles/main.css" %}'>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {% block content %}
+<p>Welcome!
+        <br>
+<p><a class="nav-item nav-link active" href="{% url 'signup' %}">Here you can register <span class="sr-only"></span></a>
+        <br>
+<p><a class="nav-link" href="{% url 'login' %}">Log in to your account!  <span class="sr-only"></span></a>
+
+        <br>
+<p><a class="nav-item nav-link active" href="{% url 'create-link' %}">Get a unique short URL! <span class="sr-only"></span></a>
+
+<br>
+ <p><a class="nav-item nav-link active" href="{% url 'links' %}">View all user links! <span class="sr-only"></span></a>
+
+    {% endblock content %}
+<p>Contacts</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% include 'navbar.html' %}
+<body>
+
+<h1>Your stripped URL</h1>
+<a href="{{ form.instance.current_url }}" class="nav-item nav-link active">{{ form.instance.striped_url }}</a>
+
+<a>Thank you for using our service!
+Your shortened link. To use all the features, please
+    register
+    or
+    <a class="nav-link" href="{% url 'login' %}">log in<span class="sr-only"></span></a>
+    to your account</a>
+</body>
+</html>

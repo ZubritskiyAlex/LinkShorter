@@ -1,0 +1,7 @@
+{% include 'navbar.html'%}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="link" placeholder="Enter link">
+</form>>
