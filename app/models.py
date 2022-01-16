@@ -13,7 +13,6 @@ class URL(models.Model):
     def __str__(self):
         return f"{self.current_url}-{self.owner}-{self.striped_url}"
 
-
     def save(self, *args, **kwargs):
         if not self._id:
             self.striped_url = f"http://{md5(self.current_url.encode()).hexdigest()[:25]}"
